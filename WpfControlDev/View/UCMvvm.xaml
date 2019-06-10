@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfControlDev.View.UCMvvm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev.UC"
+        mc:Ignorable="d"
+        Title="UCMvvm" Height="450" Width="800">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+        <local:UCEntrustBs x:Name="bs1" BsGroupName="bs1" BuySale="{Binding BuySale}"></local:UCEntrustBs>
+        <local:UCEntrustBs x:Name="bs2" BsGroupName="bs2" BuySale="{Binding BuySale2}"></local:UCEntrustBs>
+        <local:UCEntrustKp x:Name="kp1" OpenClose="{Binding EntrustKp1, Mode=TwoWay}" KpGroupName="kp1"></local:UCEntrustKp>
+        <local:UCEntrustKp x:Name="kp2" OpenClose="{Binding EntrustKp2, Mode=TwoWay}" KpGroupName="kp2"></local:UCEntrustKp>
+        <local:UCColorPicker x:Name="c1" Color="{Binding C1Color, Mode=TwoWay}" ColorChanged="c1_ColorChanged" ></local:UCColorPicker>
+        <local:UCColorPicker x:Name="c2" Color="{Binding C2Color, Mode=TwoWay}" ColorChanged="c2_ColorChanged"></local:UCColorPicker>
+        <Button x:Name="Test3" Content="Test2" Command="{Binding Test3Cmd}" Width="50"></Button>
+    </StackPanel>
+</Window>

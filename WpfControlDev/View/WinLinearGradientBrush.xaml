@@ -1,0 +1,85 @@
+﻿<Window x:Class="WpfControlDev.View.WinLinearGradientBrush"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev.View"
+        mc:Ignorable="d"
+        Title="WinLinearGradientBrush" Height="480" Width="600">
+
+    <!--
+    LinearGradientBrush 类：使用线性渐变绘制区域。
+LinearGradientBrush 使用线性渐变绘制区域。线性渐变沿直线定义渐变。该直线的终点由线性渐变的 StartPoint 和 EndPoint 属性定义。LinearGradientBrush 画笔沿此直线绘制其 GradientStops。默认的线性渐变是沿对角方向进行的。
+1、默认情况下，线性渐变的 StartPoint 是被绘制区域的左上角 (0,0)，其 EndPoint 是被绘制区域的右下角 (1,1)。所得渐变的颜色是沿着对角方向路径插入的。
+2、要创建水平线性渐变，请将 LinearGradientBrush 的 StartPoint 和 EndPoint 分别改为 (0,0.5) 和 (1,0.5)。
+3、要创建垂直线性渐变，请将 LinearGradientBrush 的 StartPoint 和 EndPoint 分别改为 (0.5,0) 和 (0.5,1)。
+    -->
+
+    <Window.Resources>
+        <LinearGradientBrush x:Key="btnBg" StartPoint="0,0.5" EndPoint="1,0.5">
+            <GradientStop Color="Red" Offset="0" />
+            <GradientStop Color="Blue" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="btnFg" StartPoint="0.5,0" EndPoint="0.5, 1">
+            <GradientStop Color="Red" Offset="0" />
+            <GradientStop Color="Blue" Offset="1" />
+        </LinearGradientBrush>
+        
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <!-- 左上角到右下角渐变 -->
+        <Rectangle Grid.Row="0" Width="200" Height="100">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Yellow" Offset="0.0" />
+                    <GradientStop Color="Red" Offset="0.25" />
+                    <GradientStop Color="Blue" Offset="0.75" />
+                    <GradientStop Color="LimeGreen" Offset="1.0" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <!-- 水平渐变 -->
+        <Canvas Grid.Row="1" Grid.Column="0" Height="100" Width="200">
+            <Canvas.Background>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Blue" Offset="1" />
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <!-- 水平渐变 -->
+        <Canvas Grid.Row="1" Grid.Column="1" Height="100" Width="200">
+            <Canvas.Background>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Color="Red" Offset="0.5" />
+                    <GradientStop Color="Blue" Offset="1" />
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <!-- 垂直渐变 -->
+        <Canvas Grid.Row="2" Grid.Column="1" Height="100" Width="200">
+            <Canvas.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5, 1">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Blue" Offset="1" />
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+
+        <Button Grid.Row="2" Grid.Column="0" Height="28" Width="80" Background="{StaticResource btnBg}" Foreground="{StaticResource btnFg}" Content="Test11"></Button>
+        
+    </Grid>
+</Window>

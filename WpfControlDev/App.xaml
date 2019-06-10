@@ -1,0 +1,59 @@
+﻿<Application x:Class="WpfControlDev.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfControlDev"
+             StartupUri="View/WinMain.xaml">
+    <Application.Resources>
+        <!--  UcUserMain  -->
+        <SolidColorBrush x:Key="UcUserMain_Background" Color="#FF192D45" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemBackground" Color="#FF416285" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemForeground" Color="#FF8CA4B6" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemMouseOverBackground" Color="#33567A" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemMouseOverForeground" Color="#7CB8E6" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemSelectedBackground" Color="#FF28486B" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemSelectedForeground" Color="#FF50BAF6" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabItemBorderBrush" Color="#192D45" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabBarBorderBrush" Color="#192D45" />
+        <SolidColorBrush x:Key="UcUserMain_TableTabBarBackground" Color="#FF416285" />
+        <Style x:Key="RadioButtonStyle1" TargetType="{x:Type RadioButton}">
+            <Setter Property="Foreground" Value="{StaticResource UcUserMain_TableTabItemForeground}" />
+            <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="Background" Value="{StaticResource UcUserMain_TableTabItemBackground}" />
+            <Setter Property="BorderBrush" Value="{StaticResource UcUserMain_TableTabItemBorderBrush}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <Border
+                                x:Name="BG"
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="0,0,1,0">
+                                <TextBlock
+                                    x:Name="text"
+                                    Margin="5,0,5,0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Text="{TemplateBinding Content}" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource UcUserMain_TableTabItemSelectedBackground}" />
+                                <Setter Property="Foreground" Value="{StaticResource UcUserMain_TableTabItemSelectedForeground}" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background" Value="{StaticResource UcUserMain_TableTabItemSelectedBackground}" />
+                                <Setter Property="Foreground" Value="{StaticResource UcUserMain_TableTabItemSelectedForeground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

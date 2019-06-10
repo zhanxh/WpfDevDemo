@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfControlDev.View.WinDatagridComboLinkage1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev.View"
+        mc:Ignorable="d"
+        Title="WinDatagridComboLinkage" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" CanUserDeleteRows="True" CanUserAddRows="True" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="319" Width="302">
+            <DataGrid.Columns>
+                <DataGridComboBoxColumn x:Name="provCombo" Header="省" ItemsSource="{Binding}"  DisplayMemberPath="{Binding DataValue}" ></DataGridComboBoxColumn>
+                <DataGridComboBoxColumn x:Name="cityCombo" Header="市" ItemsSource="{Binding}"></DataGridComboBoxColumn>
+                <DataGridComboBoxColumn x:Name="areaCombo" Header="区" ItemsSource="{Binding}"></DataGridComboBoxColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfControlDev.View.WinDatagridComboLinkage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev.View"
+        mc:Ignorable="d"
+        Title="WinDatagridComboLinkage" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" CanUserDeleteRows="True" CanUserAddRows="True" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="319" Width="302">
+            <DataGrid.Columns>
+                <!--省-->
+                <DataGridTemplateColumn Header="省" Width="100">
+                    <!--显示模式-->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Province ,Mode=TwoWay}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <!--编辑模式-->
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox x:Name="ComboBoxProvince" DropDownClosed="ProvinceDropDownClosed"  SelectionChanged="ProvinceSelectionChanged"  Loaded="ProvinceLoaded" 
+                                      ItemsSource="{Binding DataContext.Provinces, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}}" 
+                                      SelectedItem="{Binding Province, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+                <!--市-->
+                <DataGridTemplateColumn Header="市" Width="100">
+                    <!--显示模式-->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=City ,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <!--编辑模式-->
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox x:Name="ComboBoxCity" DropDownClosed="CityDropDownClosed" Loaded="CityLoaded" SelectionChanged="CitySelectionChanged" SelectedItem="{Binding City,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+                <!--区-->
+                <DataGridTemplateColumn Header="区" Width="100">
+                    <!--显示模式-->
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Area}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <!--编辑模式-->
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox x:Name="ComboBoxArea"  DropDownClosed="AreaDropDownClosed" Loaded="AreaLoaded" SelectedItem="{Binding Path=Area, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></ComboBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="ListViewSearch.DemoWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="clr-namespace:System;assembly=mscorlib"
+    xmlns:c="clr-namespace:System.Collections;assembly=mscorlib"
+    Title="List Search" Height="300" Width="150">
+    <Window.Resources>
+        <c:ArrayList x:Key="ItemsData">
+            <s:String>Mark</s:String>
+            <s:String>Zip</s:String>
+            <s:String>Zop</s:String>
+            <s:String>Log</s:String>
+            <s:String>Lof</s:String>
+            <s:String>Loft</s:String>
+            <s:String>goft</s:String>
+            <s:String>gost</s:String>
+            <s:String>safe</s:String>
+            <s:String>move</s:String>
+            <s:String>movement</s:String>
+            <s:String>moment</s:String>
+            <s:String>most</s:String>
+        </c:ArrayList>
+        <CollectionViewSource x:Key="ViewSource" Filter="OnViewFilter"
+                              Source="{StaticResource ItemsData}"/>
+    </Window.Resources>
+    <DockPanel>
+        <TextBox Name="txtFilter" DockPanel.Dock="Top"
+                 TextChanged="OnFilterChanged"/>
+        <ListView ItemsSource="{Binding Source={StaticResource ViewSource}}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="姓名" CellTemplate="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn Header="年龄" CellTemplate="{Binding Age}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>

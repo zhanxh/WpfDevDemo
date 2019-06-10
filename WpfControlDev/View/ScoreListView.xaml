@@ -1,0 +1,73 @@
+﻿<Window x:Class="WpfControlDev.View.ScoreListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sort="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        xmlns:group="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
+        xmlns:vm="clr-namespace:WpfControlDev.ViewModel"
+        xmlns:local="clr-namespace:WpfControlDev"
+        mc:Ignorable="d"
+        Title="ScoreListView" Height="541" Width="526">
+    <Window.Resources>
+        <CollectionViewSource x:Key="colViewSource" Source="{Binding StudentList,Mode=TwoWay}" Filter="CollectionViewSource_Filter">
+            <CollectionViewSource.SortDescriptions>
+                <!--在此插入排序描述-->
+                <sort:SortDescription PropertyName="Score" Direction="Ascending" />
+            </CollectionViewSource.SortDescriptions>
+            <CollectionViewSource.GroupDescriptions>
+                <!--在此分组排序描述-->
+                <group:PropertyGroupDescription PropertyName="Score"></group:PropertyGroupDescription>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </Window.Resources>
+    <Window.DataContext>
+        <vm:ScoreListViewModel x:Name="scoreListViewModel"></vm:ScoreListViewModel>
+    </Window.DataContext>
+    <Grid>
+        <ListBox Name="dataGrid1" ItemsSource="{Binding Source={StaticResource colViewSource}}" Height="Auto" VerticalAlignment="Top">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Border CornerRadius="5" BorderBrush="SkyBlue" BorderThickness="3" Height="30" Width="50">
+                            <Label FontSize="10" FontWeight="Bold">Name</Label>
+                        </Border>
+                        <Border CornerRadius="5" BorderBrush="Blue" BorderThickness="3" Height="30" Width="80">
+                            <Label FontSize="10" FontWeight="Bold" Content="{Binding Path=UserName}" Foreground="Green"></Label>
+                        </Border>
+                        <Border CornerRadius="5" BorderBrush="Orange" BorderThickness="3" Height="30" Width="50" Margin="50,0,0,0">
+                            <Label FontSize="10" FontWeight="Bold">Score</Label>
+                        </Border>
+                        <Border CornerRadius="5" BorderBrush="OrangeRed" BorderThickness="3" Height="30" Width="80">
+                            <Label FontSize="10" FontWeight="Bold" Content="{Binding Path=Score}" Foreground="Pink"></Label>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <!--实现分组-->
+            <ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <!--数据模板在GroupStyle中具有特殊的CollectionViewGroup数据上下文;CollectionViewGroup在后台实例化，具有固定Name属性标识每个Group分组的名称-->
+                            <Border CornerRadius="5" BorderBrush="Yellow" BorderThickness="3" Height="30" Width="80" HorizontalAlignment="Left">
+                                <Label FontSize="10" FontWeight="Bold" Content="{Binding Path=Name}" Foreground="Black"></Label>
+                            </Border>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListBox.GroupStyle>
+        </ListBox>
+        <Button Height="23" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="17,0,0,74" Name="btnAdd" VerticalAlignment="Bottom" Width="75">新增一笔数据</Button>
+        <Button Height="23" Command="{Binding ModifyCommand}" HorizontalAlignment="Left" Margin="17,0,0,45" Name="btnModify" VerticalAlignment="Bottom" Width="75">修改一笔数据</Button>
+        <Button Height="23" Command="{Binding RemoveCommand}" HorizontalAlignment="Left" Margin="17,0,0,16" Name="btnRemove" VerticalAlignment="Bottom" Width="75">移除一笔数据</Button>
+        <CheckBox Height="16" Margin="110,0,212,18" Name="chkPass" VerticalAlignment="Bottom" IsChecked="{Binding Path=IsPassed, Mode=TwoWay}">及格</CheckBox>
+        <Button Content="Sort Name" HorizontalAlignment="Left" Margin="97,423,0,0" VerticalAlignment="Top" Width="82" Height="23" Click="SortName_Click"/>
+        <Button Content="Sort Score" HorizontalAlignment="Left" Margin="97,451,0,0" VerticalAlignment="Top" Width="82" Height="23" Click="SortScore_Click"/>
+        <Button Content="Group Score 1" HorizontalAlignment="Left" Margin="184,423,0,0" VerticalAlignment="Top" Width="92" Height="23" Click="GroupScore1_Click"/>
+        <Button Content="Group Score 2" HorizontalAlignment="Left" Margin="184,451,0,0" VerticalAlignment="Top" Width="92" Height="23" Click="GroupScore2_Click"/>
+        <Button Content="Filter Name" HorizontalAlignment="Left" Margin="281,423,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="FilterName_Click"/>
+        <Button Content="Move to Next" HorizontalAlignment="Left" Margin="386,423,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="MoveToNext_Click"/>
+        <Button Content="Move to Previous" HorizontalAlignment="Left" Margin="388,451,0,0" VerticalAlignment="Top" Width="119" Height="23" Click="MoveToPrevious_Click"/>
+    </Grid>
+</Window>

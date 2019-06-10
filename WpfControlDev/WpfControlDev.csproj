@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C61F85B-BB4F-4FE6-A3F7-CDDF7AC43F96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WpfControlDev</RootNamespace>
+    <AssemblyName>WpfControlDev</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WpfControlDev.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism, Version=7.2.0.1038, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.2.0.1038-pre\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ControlHelper\AttachedProperties.cs" />
+    <Compile Include="DAO\DbBase.cs" />
+    <Compile Include="Extend\ControlSearch.cs" />
+    <Compile Include="Extend\DevException.cs" />
+    <Compile Include="Extend\FileOpr.cs" />
+    <Compile Include="Extend\IExecuteWithObject.cs" />
+    <Compile Include="Extend\IExecuteWithObjectAndResult.cs" />
+    <Compile Include="Extend\RelayCommand.cs" />
+    <Compile Include="Extend\WeakAction.cs" />
+    <Compile Include="Extend\WeakFunc.cs" />
+    <Compile Include="Model\CCompany.cs" />
+    <Compile Include="Model\CDepartment.cs" />
+    <Compile Include="Model\CPersion.cs" />
+    <Compile Include="Model\CSData.cs" />
+    <Compile Include="Model\ExchangeOpr.cs" />
+    <Compile Include="Model\FileMsg.cs" />
+    <Compile Include="Model\IOVariable.cs" />
+    <Compile Include="Model\IOVariableModel.cs" />
+    <Compile Include="Model\RegionInfo.cs" />
+    <Compile Include="Provider\GroupDataProvider.cs" />
+    <Compile Include="Threading\Enums.cs" />
+    <Compile Include="Threading\IWorkCommand.cs" />
+    <Compile Include="Threading\IWorkResult.cs" />
+    <Compile Include="Threading\WorkCommand.cs" />
+    <Compile Include="Threading\Working\APM.cs" />
+    <Compile Include="Threading\Working\EAP.cs" />
+    <Compile Include="Threading\Working\IWork.cs" />
+    <Compile Include="Threading\Working\TAP.cs" />
+    <Compile Include="Threading\WorkManager.cs" />
+    <Compile Include="Threading\WorkResult.cs" />
+    <Compile Include="Tool\DownLoadTest.cs" />
+    <Compile Include="Tool\Test.cs" />
+    <Compile Include="UC\UCCodeSeach.xaml.cs">
+      <DependentUpon>UCCodeSeach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extend\DelegateCommand.cs" />
+    <Compile Include="Extend\ViewModelBase.cs" />
+    <Compile Include="ViewModel\FundsVm.cs" />
+    <Compile Include="ViewModel\FastKeyVm.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="ControlHelper\PasswordBoxHelper.cs" />
+    <Compile Include="ControlHelper\PasswordBoxWaterMark.cs" />
+    <Compile Include="Provider\StudentService.cs" />
+    <Compile Include="ViewModel\IOVariableViewModel.cs" />
+    <Compile Include="ViewModel\PwdVm.cs" />
+    <Compile Include="View\PwdWin.xaml.cs">
+      <DependentUpon>PwdWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ScoreListView.xaml.cs">
+      <DependentUpon>ScoreListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMvvm.xaml.cs">
+      <DependentUpon>UCMvvm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\UcMvvmVm.cs" />
+    <Compile Include="UC\UCColorPicker.xaml.cs">
+      <DependentUpon>UCColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCEntrustBs.xaml.cs">
+      <DependentUpon>UCEntrustBs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCEntrustKp.xaml.cs">
+      <DependentUpon>UCEntrustKp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ScoreListViewModel.cs" />
+    <Compile Include="ViewModel\StudentsViewModel.cs" />
+    <Compile Include="View\WinCanvas.xaml.cs">
+      <DependentUpon>WinCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinColorAnimation.xaml.cs">
+      <DependentUpon>WinColorAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinDatagridComboLinkage1.xaml.cs">
+      <DependentUpon>WinDatagridComboLinkage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinDatagridComboLinkage.xaml.cs">
+      <DependentUpon>WinDatagridComboLinkage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinDatagridFilter.xaml.cs">
+      <DependentUpon>WinDatagridFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinDataGridComboxEdit.xaml.cs">
+      <DependentUpon>WinDataGridComboxEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinEventAggregator.xaml.cs">
+      <DependentUpon>WinEventAggregator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinGrid.xaml.cs">
+      <DependentUpon>WinGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinLinearGradientBrush.xaml.cs">
+      <DependentUpon>WinLinearGradientBrush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinListBoxStyle.xaml.cs">
+      <DependentUpon>WinListBoxStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinListView.xaml.cs">
+      <DependentUpon>WinListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinMain.xaml.cs">
+      <DependentUpon>WinMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinRadioStyle.xaml.cs">
+      <DependentUpon>WinRadioStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinTimerTest.xaml.cs">
+      <DependentUpon>WinTimerTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinTreeViewStyle.xaml.cs">
+      <DependentUpon>WinTreeViewStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinVersionCmp.xaml.cs">
+      <DependentUpon>WinVersionCmp.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UC\UCCodeSeach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinCodeSeach.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\WinCodeSeach.xaml.cs">
+      <DependentUpon>WinCodeSeach.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\PwdWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ScoreListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCMvvm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\UCColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\UCEntrustBs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\UCEntrustKp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinColorAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinDatagridComboLinkage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\WinDatagridComboLinkage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinDatagridFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinDataGridComboxEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinEventAggregator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinLinearGradientBrush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinListBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinRadioStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinTimerTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinTreeViewStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinVersionCmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
