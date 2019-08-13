@@ -26,6 +26,11 @@
             <Button x:Name="tvsBtn" Content="TreeView" Click="tvsBtn_Click"></Button>
             <Button x:Name="tvsEAgg" Content="WinEventAggregator" Click="tvsEAgg_Click"></Button>
             <Button x:Name="dgColumnCombox" Content="dg3级联动" Click="dgColumnCombox_Click"></Button>
+            <Button x:Name="tgbtn" Content="ToggleButtonStyle" Click="tgbtn_Click"></Button>
+            <Button x:Name="checkboxBtn" Content="CheckBoxStyle" Click="checkboxBtn_Click"></Button>
+            <Button x:Name="RepeatBtn" Content="RepeatBtn" Click="RepeatBtn_OnClick"></Button>
+            <Button x:Name="AutoGridBtn" Content="AutoGridBtn" Click="AutoGridBtn_OnClick"></Button>
+            <Button x:Name="ctrls" Content="ctrls" Click="Ctrls_OnClick"></Button>
         </WrapPanel>
         <Label x:Name="msgTxt" Grid.Row="1" Content="状态"></Label>
     </Grid>

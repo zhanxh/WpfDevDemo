@@ -1,0 +1,90 @@
+﻿<Window x:Class="WpfControlDev.View.WinAutoGird"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev.View"
+        mc:Ignorable="d"
+        Title="WinAutoGird" Height="300" Width="360">
+    <DockPanel>
+        <local:UCAutoGrid></local:UCAutoGrid>
+    </DockPanel>
+    <!--<DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="0,50,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Border BorderBrush="CadetBlue" BorderThickness="2">
+                        <TextBlock TextAlignment="Center" FontSize="20" Text="王者农药"/>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Border BorderBrush="Red" BorderThickness="1">
+                            <TextBlock TextAlignment="Center" FontSize="20" Text="推塔"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Border BorderBrush="Yellow" BorderThickness="1">
+                            <TextBlock TextAlignment="Center" FontSize="20" Text="竞技"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Border BorderBrush="Blue" BorderThickness="1">
+                            <TextBlock TextAlignment="Center" FontSize="20" Text="王者不可阻挡"/>
+                        </Border>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Button Background="MediumSpringGreen" FontSize="20" Content="匹配"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button Background="Coral" FontSize="20" Content="排位"/>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <ComboBox Background="Coral" FontSize="20" SelectedIndex="0">
+                            <ComboBox.Items>
+                                <ComboBoxItem Content="item1"></ComboBoxItem>
+                                <ComboBoxItem Content="item2"></ComboBoxItem>
+                                <ComboBoxItem Content="item3"></ComboBoxItem>
+                                <ComboBoxItem Content="item4"></ComboBoxItem>
+                                <ComboBoxItem Content="item5"></ComboBoxItem>
+                                <ComboBoxItem Content="item6"></ComboBoxItem>
+                            </ComboBox.Items>
+                        </ComboBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </DockPanel>
+        <DockPanel>
+            <DataGrid FontSize="20" ItemsSource="{Binding}" Name="DataGridHeroList" AutoGenerateColumns="False" ColumnWidth="auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="英雄"
+                                    Binding="{Binding Name}" >
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="定位"
+                                    Binding="{Binding Type}" >
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="难度"
+                                    Binding="{Binding DegreeOfDifficulty}" >
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+    </DockPanel>-->
+</Window>

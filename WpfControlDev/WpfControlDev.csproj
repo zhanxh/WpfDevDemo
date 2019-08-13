@@ -74,6 +74,7 @@
     <Compile Include="ControlHelper\AttachedProperties.cs" />
     <Compile Include="DAO\DbBase.cs" />
     <Compile Include="Extend\ControlSearch.cs" />
+    <Compile Include="Extend\DataConverter.cs" />
     <Compile Include="Extend\DevException.cs" />
     <Compile Include="Extend\FileOpr.cs" />
     <Compile Include="Extend\IExecuteWithObject.cs" />
@@ -122,6 +123,9 @@
     <Compile Include="View\ScoreListView.xaml.cs">
       <DependentUpon>ScoreListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\UCAutoGrid.xaml.cs">
+      <DependentUpon>UCAutoGrid.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UCMvvm.xaml.cs">
       <DependentUpon>UCMvvm.xaml</DependentUpon>
     </Compile>
@@ -138,11 +142,23 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ScoreListViewModel.cs" />
     <Compile Include="ViewModel\StudentsViewModel.cs" />
+    <Compile Include="View\WinAutoGird.xaml.cs">
+      <DependentUpon>WinAutoGird.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WinCanvas.xaml.cs">
       <DependentUpon>WinCanvas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WinCheckBoxStyle.xaml.cs">
+      <DependentUpon>WinCheckBoxStyle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WinColorAnimation.xaml.cs">
       <DependentUpon>WinColorAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinCtrls.xaml.cs">
+      <DependentUpon>WinCtrls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinRepeatBtnStyle.xaml.cs">
+      <DependentUpon>WinRepeatBtnStyle.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WinDatagridComboLinkage1.xaml.cs">
       <DependentUpon>WinDatagridComboLinkage1.xaml</DependentUpon>
@@ -183,13 +199,36 @@
     <Compile Include="View\WinTimerTest.xaml.cs">
       <DependentUpon>WinTimerTest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WinToggleButtonStyle.xaml.cs">
+      <DependentUpon>WinToggleButtonStyle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WinTreeViewStyle.xaml.cs">
       <DependentUpon>WinTreeViewStyle.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WinVersionCmp.xaml.cs">
       <DependentUpon>WinVersionCmp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Yoyo\BuyOrSell.cs" />
+    <Compile Include="Yoyo\HedgePanel.cs" />
+    <Compile Include="Yoyo\OpenOrClose.cs" />
+    <Compile Include="Yoyo\RoundButton.cs" />
+    <Page Include="Themes\YoyoTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UC\UCCodeSeach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UCAutoGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinAutoGird.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinCheckBoxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +273,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WinColorAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinCtrls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinRepeatBtnStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -286,6 +333,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WinTimerTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinToggleButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

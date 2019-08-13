@@ -1,0 +1,164 @@
+﻿<UserControl x:Class="WpfControlDev.View.UCAutoGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfControlDev.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <!--策略-->
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--合约 -->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--买卖 -->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--开平 -->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--价格 -->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--数量 -->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+
+            <!--下单、重置 -->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="20*"/>
+            <!--标签 -->
+            <ColumnDefinition Width="35*"></ColumnDefinition>
+            <!--实体 -->
+            <ColumnDefinition Width="113*"></ColumnDefinition>
+            <!--间距-->
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Grid.Row="0" Grid.Column="2" Content="账户" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ></Label>
+        <ComboBox x:Name="cbAccount" Grid.Row="0" Grid.Column="3" SelectedIndex="0">
+            <ComboBox.Items>
+                <ComboBoxItem Content="Account1"></ComboBoxItem>
+                <ComboBoxItem Content="Account2"></ComboBoxItem>
+                <ComboBoxItem Content="Account3"></ComboBoxItem>
+                <ComboBoxItem Content="Account4"></ComboBoxItem>
+                <ComboBoxItem Content="Account5"></ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+
+        <Label Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="产品" Background="Transparent" ></Label>
+
+        <ComboBox x:Name="cbProd"  Grid.Row="1" Grid.Column="3" SelectedIndex="0">
+            <ComboBox.Items>
+                <ComboBoxItem Content="Product1"></ComboBoxItem>
+                <ComboBoxItem Content="Product2"></ComboBoxItem>
+                <ComboBoxItem Content="Product3"></ComboBoxItem>
+                <ComboBoxItem Content="Product4"></ComboBoxItem>
+                <ComboBoxItem Content="Product5"></ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+
+        <Label Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="策略" Background="Transparent" ></Label>
+        <ComboBox x:Name="cbStrategy"   Grid.Row="2" Grid.Column="3" SelectedIndex="0">
+            <ComboBox.Items>
+                <ComboBoxItem Content="Strategy1"></ComboBoxItem>
+                <ComboBoxItem Content="Strategy1"></ComboBoxItem>
+                <ComboBoxItem Content="Strategy1"></ComboBoxItem>
+                <ComboBoxItem Content="Strategy1"></ComboBoxItem>
+                <ComboBoxItem Content="Strategy1"></ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+
+
+
+
+        <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,3,0" Width="0"/>
+
+        <!--锁按钮-->
+        <Button x:Name="btnLock" Content="锁" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Button>
+        <Label Content="合约" Grid.Row="4" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></Label>
+        <!-- 合约代码 -->
+        <ComboBox x:Name="cbCode"  Grid.Row="4" Grid.Column="3" SelectedIndex="0" >
+            <ComboBox.Items>
+                <ComboBoxItem Content="Code11111"></ComboBoxItem>
+                <ComboBoxItem Content="Code11111"></ComboBoxItem>
+                <ComboBoxItem Content="Code11111"></ComboBoxItem>
+                <ComboBoxItem Content="Code11111"></ComboBoxItem>
+                <ComboBoxItem Content="Code11111"></ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+
+        <TextBlock Name="tbCodeName" 
+                       Grid.Row="5" Grid.Column="3" Panel.ZIndex="-1"
+                       Text="合约名称" FontSize="10" Grid.RowSpan="2"/>
+
+        <Label Grid.Row="7" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="买卖"></Label>
+        <!-- 买卖设置-->
+        <!--<local:UCEntrustBs x:Name="entrustbs" Grid.Row="7" Grid.Column="3" IsEnabled="{Binding IsBsEnable}" EntrustBs="{Binding EntrustBs,Mode=TwoWay}" TabIndex="4" Visibility="{Binding Path=CombType, Converter={StaticResource CombConverter}, ConverterParameter=radio}"></local:UCEntrustBs>-->
+        <!--<TextBlock x:Name="entrustBsText" Margin="5,0" Grid.Row="3" Grid.Column="2" Text="{Binding DirectionStr}" Foreground="Red" Visibility="{Binding Path=CombType, Converter={StaticResource CombConverter}, ConverterParameter=textblock}" />-->
+
+
+        <!--<Label Grid.Row="8" Grid.Column="0" Content="{DynamicResource strOpenClose}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" ></Label>-->
+        <ToggleButton Grid.Row="9" Grid.Column="2" Padding="5,0,5,0" Focusable="False" Content="开平" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <!-- 开平设置-->
+        <!--<local:UCEntrustKp x:Name="entrustkp" Grid.Row="9" Grid.Column="3" IsEnabled="{Binding IsKpEnable}" EntrustKp="{Binding EntrustKp,Mode=TwoWay}" TabIndex="5" Grid.ColumnSpan="2" Visibility="{Binding Path=CombType, Converter={StaticResource CombConverter}, ConverterParameter=radio}"></local:UCEntrustKp>-->
+        <!--<TextBlock x:Name="entrustKpText" Margin="5,0" Grid.Row="5" Grid.Column="2" Text="{Binding KpStr}" Foreground="Red" Visibility="{Binding Path=CombType, Converter={StaticResource CombConverter}, ConverterParameter=textblock}" />-->
+
+        <!-- 价格 -->
+        <Button Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="模式"/>
+
+        <StackPanel Grid.Row="11" Grid.Column="4" Orientation="Horizontal">
+            <!--<hs:HsNumericUpDown Name="numudprice" 
+                                Style="{DynamicResource MtNumericUpDown}"
+                                Height="24" IncreaseDecreaseMode="LeftRight"                   
+                                Width="120" TabIndex="6" Interval="{Binding PriceStep}"
+                                Value="{Binding EntrustPrice, Mode=TwoWay}"
+                                LostFocus="PriceLostFocus" GotFocus="numudprice_GotFocus">
+            </hs:HsNumericUpDown>-->
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <Label x:Name="sale1" Content="{Binding Sale1Price}" Padding="0" VerticalContentAlignment="Bottom">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="{DynamicResource GreenColor}"></SolidColorBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label x:Name="buy1" Content="{Binding Buy1Price}" Padding="0" VerticalContentAlignment="Top">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="{DynamicResource RedColor}"></SolidColorBrush>
+                    </Label.Foreground>
+                </Label>
+            </StackPanel>
+        </StackPanel>
+
+
+        <!-- 数量 -->
+        <Label Grid.Row="13" Grid.Column="2" Content="数量" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <!--<NumericUpDown Grid.Row="13" Grid.Column="3"
+                            Name="numudCount" Style="{DynamicResource MtNumericUpDown}" 
+                            Height="24" IncreaseDecreaseMode="LeftRight"                        
+                            Width="120"  Minimum="0" DisableNegative="True"
+                            SelectAllOnFocus="True" Interval="{Binding AmountStep}"
+                            LostFocus="NumLostFocus" TabIndex="7"
+                            Value="{Binding EntrustAmount,Mode=TwoWay,NotifyOnValidationError=True}" 
+                            ShowValidationBorder="True" 
+                            ValidationTrigger="Explicit" IsStartValidation="True">
+        </NumericUpDown>-->
+
+        <!-- 下单 -->
+        <Button x:Name="btnOrder"   Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                         FontSize="14" 
+                         Content="下单"
+                         BorderThickness="1" TabIndex="8"/>
+
+    </Grid>
+</UserControl>

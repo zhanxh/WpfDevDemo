@@ -26,6 +26,18 @@ namespace WpfControlDev.View
         public WinMain()
         {
             InitializeComponent();
+            Test();
+        }
+
+        private void Test()
+        {
+            var tp = typeof(ViewModel.UcMvvmVm);
+            var props = tp.GetProperties();
+            var ms = tp.GetMethods(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            foreach(var prop in props)
+            {
+                Console.WriteLine(prop.Name);
+            }
         }
 
         private void gvBtn_Click(object sender, RoutedEventArgs e)
@@ -159,6 +171,41 @@ namespace WpfControlDev.View
             WinDatagridComboLinkage wdgcl = new WinDatagridComboLinkage();
             wdgcl.Owner = this;
             wdgcl.Show();
+        }
+
+        private void tgbtn_Click(object sender, RoutedEventArgs e)
+        {
+            WinToggleButtonStyle wtbs = new WinToggleButtonStyle();
+            wtbs.Owner = this;
+            wtbs.Show();
+        }
+
+        private void checkboxBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WinCheckBoxStyle wcbs = new WinCheckBoxStyle();
+            wcbs.Owner = this;
+            wcbs.Show();
+        }
+
+        private void RepeatBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            WinRepeatBtnStyle win = new WinRepeatBtnStyle();
+            win.Owner = this;
+            win.Show();
+        }
+
+        private void AutoGridBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            WinAutoGird win = new WinAutoGird();
+            win.Owner = this;
+            win.Show();
+        }
+
+        private void Ctrls_OnClick(object sender, RoutedEventArgs e)
+        {
+            WinCtrls win = new WinCtrls();
+            win.Owner = this;
+            win.Show();
         }
     }
 }

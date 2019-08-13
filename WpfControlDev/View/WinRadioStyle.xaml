@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="WinRadioStyle" Height="300" Width="300">
     <!--<Window.Resources>
+        --><!--  UcUserMain  --><!--
         <SolidColorBrush x:Key="UcUserMain_Background" Color="#FF192D45" />
         <SolidColorBrush x:Key="UcUserMain_TableTabItemBackground" Color="#FF416285" />
         <SolidColorBrush x:Key="UcUserMain_TableTabItemForeground" Color="#FF8CA4B6" />
@@ -36,7 +37,7 @@
                                 BorderThickness="0,0,1,0">
                                 <TextBlock
                                     x:Name="text"
-                                    Margin="5,0,0,0"
+                                    Margin="5,0,5,0"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     Foreground="{TemplateBinding Foreground}"
