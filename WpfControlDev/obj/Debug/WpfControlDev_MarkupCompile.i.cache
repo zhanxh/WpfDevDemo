@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\dev\visual studio 2015\Projects\WpfControlDev\WpfControlDev\App.xaml
-32814550238
+331193002813
 
-90-103731961
-68-394764511
-Themes\YoyoTheme.xaml;UC\UCCodeSeach.xaml;View\UCAutoGrid.xaml;View\WinAutoGird.xaml;View\WinCheckBoxStyle.xaml;View\WinCodeSeach.xaml;View\PwdWin.xaml;View\ScoreListView.xaml;View\UCMvvm.xaml;UC\UCColorPicker.xaml;UC\UCEntrustBs.xaml;UC\UCEntrustKp.xaml;View\WinCanvas.xaml;View\WinColorAnimation.xaml;View\WinCtrls.xaml;View\WinRepeatBtnStyle.xaml;View\WinDatagridComboLinkage1.xaml;View\WinDatagridComboLinkage.xaml;View\WinDatagridFilter.xaml;View\WinDataGridComboxEdit.xaml;View\Window1.xaml;View\WinEventAggregator.xaml;View\WinGrid.xaml;View\WinLinearGradientBrush.xaml;View\WinListBoxStyle.xaml;View\WinListView.xaml;View\WinMain.xaml;View\WinRadioStyle.xaml;View\WinTimerTest.xaml;View\WinToggleButtonStyle.xaml;View\WinTreeViewStyle.xaml;View\WinVersionCmp.xaml;
+911680031936
+69-1570375811
+Themes\YoyoTheme.xaml;UC\UCCodeSeach.xaml;View\UCAutoGrid.xaml;View\WinAutoGird.xaml;View\WinCheckBoxStyle.xaml;View\WinCodeSeach.xaml;View\PwdWin.xaml;View\ScoreListView.xaml;View\UCMvvm.xaml;UC\UCColorPicker.xaml;UC\UCEntrustBs.xaml;UC\UCEntrustKp.xaml;View\WinCanvas.xaml;View\WinColorAnimation.xaml;View\WinCtrls.xaml;View\WinMenu.xaml;View\WinRepeatBtnStyle.xaml;View\WinDatagridComboLinkage1.xaml;View\WinDatagridComboLinkage.xaml;View\WinDatagridFilter.xaml;View\WinDataGridComboxEdit.xaml;View\Window1.xaml;View\WinEventAggregator.xaml;View\WinGrid.xaml;View\WinLinearGradientBrush.xaml;View\WinListBoxStyle.xaml;View\WinListView.xaml;View\WinMain.xaml;View\WinRadioStyle.xaml;View\WinTimerTest.xaml;View\WinToggleButtonStyle.xaml;View\WinTreeViewStyle.xaml;View\WinVersionCmp.xaml;
 
-False
+True
 

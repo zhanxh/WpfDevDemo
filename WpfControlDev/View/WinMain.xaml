@@ -31,6 +31,7 @@
             <Button x:Name="RepeatBtn" Content="RepeatBtn" Click="RepeatBtn_OnClick"></Button>
             <Button x:Name="AutoGridBtn" Content="AutoGridBtn" Click="AutoGridBtn_OnClick"></Button>
             <Button x:Name="ctrls" Content="ctrls" Click="Ctrls_OnClick"></Button>
+            <Button x:Name="menus" Content="Menus" Click="Menus_OnClick"></Button>
         </WrapPanel>
         <Label x:Name="msgTxt" Grid.Row="1" Content="状态"></Label>
     </Grid>

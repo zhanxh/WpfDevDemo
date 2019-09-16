@@ -70,6 +70,7 @@
     <Compile Include="sort\SortStringTest.cs" />
     <Compile Include="sort\StringSort.cs" />
     <Compile Include="TimeCounter.cs" />
+    <Compile Include="tool\SyncOnce.cs" />
     <Compile Include="typetest\TpTest.cs" />
   </ItemGroup>
   <ItemGroup>

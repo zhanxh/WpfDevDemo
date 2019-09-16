@@ -207,5 +207,12 @@ namespace WpfControlDev.View
             win.Owner = this;
             win.Show();
         }
+
+        private void Menus_OnClick(object sender, RoutedEventArgs e)
+        {
+            WinMenu win = new WinMenu();
+            win.Owner = this;
+            win.Show();
+        }
     }
 }

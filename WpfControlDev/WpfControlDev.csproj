@@ -42,6 +42,7 @@
       <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="Prism, Version=7.2.0.1038, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.7.2.0.1038-pre\lib\net45\Prism.dll</HintPath>
       <Private>True</Private>
@@ -156,6 +157,9 @@
     </Compile>
     <Compile Include="View\WinCtrls.xaml.cs">
       <DependentUpon>WinCtrls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinMenu.xaml.cs">
+      <DependentUpon>WinMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WinRepeatBtnStyle.xaml.cs">
       <DependentUpon>WinRepeatBtnStyle.xaml</DependentUpon>
@@ -277,6 +281,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WinCtrls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
