@@ -158,8 +158,14 @@
     <Compile Include="View\WinCtrls.xaml.cs">
       <DependentUpon>WinCtrls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\WinListView1.xaml.cs">
+      <DependentUpon>WinListView1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\WinMenu.xaml.cs">
       <DependentUpon>WinMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinProcessBar.xaml.cs">
+      <DependentUpon>WinProcessBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WinRepeatBtnStyle.xaml.cs">
       <DependentUpon>WinRepeatBtnStyle.xaml</DependentUpon>
@@ -284,7 +290,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\WinListView1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\WinMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinProcessBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

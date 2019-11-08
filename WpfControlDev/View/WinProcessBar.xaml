@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfControlDev.View.WinProcessBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev.View"
+        mc:Ignorable="d"
+        Title="WinProcessBar" Height="300" Width="300">
+    <Window.Resources>
+        <!--ProgressBar Style-->
+        <SolidColorBrush x:Key="ControlBorderBrush">Transparent</SolidColorBrush>
+        <SolidColorBrush x:Key="FocusBorderBrush">LightBlue</SolidColorBrush>
+        <Style TargetType="ProgressBar" x:Key="SimpleProgressBar">
+            <Setter Property="Background" Value="{StaticResource ControlBorderBrush}" />
+            <Setter Property="Maximum" Value="1" />
+            <Setter Property="Value" Value="0" />
+            <Setter Property="Height" Value="10" />
+            <Setter Property="IsTabStop" Value="False" />
+            <Setter Property="BorderBrush" Value="Yellow" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Foreground" Value="{StaticResource FocusBorderBrush}" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Grid x:Name="Root" >
+                            <Border x:Name="PART_Track" Background="{TemplateBinding Background}" 
+                                CornerRadius="0"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <Border  x:Name="PART_Indicator" HorizontalAlignment="Left" Background="{TemplateBinding Foreground}" 
+                                CornerRadius="0"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Orientation" Value="Vertical">
+                                <Setter Property="LayoutTransform" TargetName="Root" >
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical">
+            <ProgressBar x:Name="pb" Width="100" Height="20" Minimum="0" Maximum="100" Value="45" Style="{StaticResource SimpleProgressBar}"></ProgressBar>
+            <ProgressBar x:Name="pb1" Width="100" Height="20" Minimum="0" Maximum="10000" Value="1" Style="{StaticResource SimpleProgressBar}"></ProgressBar>
+            <TextBox Text="hehe"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Button Click="Add_OnClick" Content="加" Margin="5"></Button>
+            <Button Click="Dec_OnClick" Content="减" Margin="5"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -15,6 +15,7 @@
             <Button x:Name="ucMvvm" Content="UCMvvm" Click="ucMvvm_Click" />
             <Button x:Name="canvasBtn" Content="Canvas" Click="canvasBtn_Click"/>
             <Button x:Name="gvBtn" Content="ListView" Click="gvBtn_Click"/>
+            <Button x:Name="gvBtn1" Content="ListView1" Click="gvBtn1_Click"/>
             <Button x:Name="gdFilter" Content="GDFilter" Click="gdFilter_Click"/>
             <Button x:Name="GroupTest" Content="GroupTest" Click="GroupTest_Click"></Button>
             <Button x:Name="asyncUITest" Content="asyncUI" Click="asyncUITest_Click"></Button>
@@ -32,6 +33,7 @@
             <Button x:Name="AutoGridBtn" Content="AutoGridBtn" Click="AutoGridBtn_OnClick"></Button>
             <Button x:Name="ctrls" Content="ctrls" Click="Ctrls_OnClick"></Button>
             <Button x:Name="menus" Content="Menus" Click="Menus_OnClick"></Button>
+            <Button x:Name="pb" Content="ProgressBar" Click="PB_OnClick"></Button>
         </WrapPanel>
         <Label x:Name="msgTxt" Grid.Row="1" Content="状态"></Label>
     </Grid>

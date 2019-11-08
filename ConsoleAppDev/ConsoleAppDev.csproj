@@ -60,6 +60,9 @@
     <Compile Include="CacheMgrTest\CMTest.cs" />
     <Compile Include="gpb\Addressbook.cs" />
     <Compile Include="gpb\Tool.cs" />
+    <Compile Include="locktest\MutexTest.cs" />
+    <Compile Include="lqtest\Linq1Test.cs" />
+    <Compile Include="lqtest\StuScore.cs" />
     <Compile Include="ProcesserTime.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +72,7 @@
     <Compile Include="sort\sfList.cs" />
     <Compile Include="sort\SortStringTest.cs" />
     <Compile Include="sort\StringSort.cs" />
+    <Compile Include="test\EventTest.cs" />
     <Compile Include="TimeCounter.cs" />
     <Compile Include="tool\SyncOnce.cs" />
     <Compile Include="typetest\TpTest.cs" />

@@ -1,5 +1,8 @@
 ﻿using ConsoleAppDev.CacheMgrTest;
+using ConsoleAppDev.locktest;
+using ConsoleAppDev.lqtest;
 using ConsoleAppDev.sort;
+using ConsoleAppDev.test;
 using ConsoleAppDev.typetest;
 using Google.Protobuf;
 using Google.Protobuf.Examples.AddressBook;
@@ -28,7 +31,25 @@ namespace ConsoleAppDev
             //CMTest ct = new CMTest();
             //ct.Test1();
             //SortTest();
-            ProMain();
+            //ProMain();
+
+            //Linq1Test lt = new Linq1Test();
+            //lt.Test();
+
+            //MutexTest mt = new MutexTest();
+            //mt.Test1();
+            try
+            {
+                EventTest et = new EventTest();
+                et.SetNotify("hello world!");
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.ReadKey();
         }
 
         /*

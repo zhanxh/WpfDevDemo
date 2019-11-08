@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMahAppsMetro", "WpfMahAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MysqlDev", "MysqlDev\MysqlDev.csproj", "{C66D1C4F-67C0-4C18-BF26-E49ECB54C01E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWebDev", "WpfWebDev\WpfWebDev.csproj", "{0E9C6B5A-EA01-4572-8DD9-270D388E3949}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C66D1C4F-67C0-4C18-BF26-E49ECB54C01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66D1C4F-67C0-4C18-BF26-E49ECB54C01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C66D1C4F-67C0-4C18-BF26-E49ECB54C01E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9C6B5A-EA01-4572-8DD9-270D388E3949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9C6B5A-EA01-4572-8DD9-270D388E3949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9C6B5A-EA01-4572-8DD9-270D388E3949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9C6B5A-EA01-4572-8DD9-270D388E3949}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -42,13 +43,13 @@ namespace WpfControlDev.View
 
         private void gvBtn_Click(object sender, RoutedEventArgs e)
         {
-            DateTime dt1 = DateTime.Now;
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             WinListView wlv = new WinListView();
             wlv.Owner = this;
             wlv.Show();
-            DateTime dt2 = DateTime.Now;
-            TimeSpan ts = dt2 - dt1;
-            Console.WriteLine("ls ms:" + ts.TotalMilliseconds);
+            sw.Stop();
+            Debug.WriteLine("gvBtn_Click time," + sw.ElapsedMilliseconds + "ms");
 
         }
 
@@ -213,6 +214,24 @@ namespace WpfControlDev.View
             WinMenu win = new WinMenu();
             win.Owner = this;
             win.Show();
+        }
+
+        private void PB_OnClick(object sender, RoutedEventArgs e)
+        {
+            WinProcessBar win = new WinProcessBar();
+            win.Owner = this;
+            win.Show();
+        }
+
+        private void gvBtn1_Click(object sender, RoutedEventArgs e)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            WinListView1 wlv = new WinListView1();
+            wlv.Owner = this;
+            wlv.Show();
+            sw.Stop();
+            Debug.WriteLine("gvBtn_Click time," + sw.ElapsedMilliseconds + "ms");
         }
     }
 }

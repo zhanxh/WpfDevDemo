@@ -14,6 +14,7 @@ namespace WpfControlDev.ViewModel
     {
         public StudentsViewModel()
         {
+            stuList = new ObservableCollection<Stu>();
             studentList = new ObservableCollection<Student>(StudentService.GetStudents());
             _ExchangeOprs = new List<ExchangeOpr>();
             _ExchangeOprs.Add(new ExchangeOpr() { Exchange = "F0", ExchangeCmd = ChgExchangeCmd});
@@ -39,6 +40,10 @@ namespace WpfControlDev.ViewModel
             //    var data = viewsource.CurrentItem;
             //};
         }
+        public StudentsViewModel(char mode)
+        {
+            stuList = new ObservableCollection<Stu>(StudentService.GetStus());
+        }
 
         private ObservableCollection<Student> studentList;
         public ObservableCollection<Student> StudentList
@@ -53,6 +58,23 @@ namespace WpfControlDev.ViewModel
                 {
                     this.studentList = value;
                     RaisePropertyChanged("StudentList");
+                }
+            }
+        }
+
+        private ObservableCollection<Stu> stuList;
+        public ObservableCollection<Stu> StuList
+        {
+            get
+            {
+                return this.stuList;
+            }
+            set
+            {
+                if (this.stuList != value)
+                {
+                    this.stuList = value;
+                    RaisePropertyChanged("StuList");
                 }
             }
         }

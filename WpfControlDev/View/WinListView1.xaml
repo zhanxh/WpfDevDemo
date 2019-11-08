@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfControlDev.View.WinListView1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlDev"
+        mc:Ignorable="d"
+        Title="WinListView" Height="320" Width="480">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView Name="listFilter" Grid.Row="1" ItemsSource="{Binding StuList}" SelectedIndex="0" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="xname1" Header="name1" Width="80" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn x:Name="xname2" Header="name2" Width="80" DisplayMemberBinding="{Binding Name2}" />
+                    <GridViewColumn x:Name="xname3" Header="name3" Width="80" DisplayMemberBinding="{Binding Name3}" />
+                    <GridViewColumn x:Name="xname4" Header="name4" Width="80" DisplayMemberBinding="{Binding Name4}" />
+                    <GridViewColumn x:Name="xname5" Header="name5" Width="80" DisplayMemberBinding="{Binding Name5}" />
+                    <GridViewColumn x:Name="xname6" Header="name6" Width="80" DisplayMemberBinding="{Binding Name6}" />
+                    <GridViewColumn x:Name="xname7" Header="name7" Width="80" DisplayMemberBinding="{Binding Name7}" />
+                    <GridViewColumn x:Name="xname8" Header="name8" Width="80" DisplayMemberBinding="{Binding Name8}" />
+                    <GridViewColumn x:Name="xname9" Header="name9" Width="80" DisplayMemberBinding="{Binding Name9}" />
+                    <GridViewColumn x:Name="xname10" Header="name10" Width="80" DisplayMemberBinding="{Binding Name10}" />
+                    <GridViewColumn x:Name="xname11" Header="name11" Width="80" DisplayMemberBinding="{Binding Name11}" />
+                    <GridViewColumn x:Name="xname12" Header="name12" Width="80" DisplayMemberBinding="{Binding Name12}" />
+                    <GridViewColumn x:Name="xname13" Header="name13" Width="80" DisplayMemberBinding="{Binding Name13}" />
+                    <GridViewColumn x:Name="xname14" Header="name14" Width="80" DisplayMemberBinding="{Binding Name14}" />
+                    <GridViewColumn x:Name="xname15" Header="name15" Width="80" DisplayMemberBinding="{Binding Name15}" />
+                    <GridViewColumn x:Name="xname16" Header="name16" Width="80" DisplayMemberBinding="{Binding Name16}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

@@ -25,6 +25,14 @@
                     <GridViewColumn x:Name="xshown" Header="名称" Width="Auto" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
                     <GridViewColumn x:Name="xExchange" Header="交易所" Width="Auto" DisplayMemberBinding="{Binding Exchange}"></GridViewColumn>
                     <GridViewColumn x:Name="xremark" Header="备注" Width="Auto" DisplayMemberBinding="{Binding Remark}"></GridViewColumn>
+                    <GridViewColumn x:Name="xage1" Header="年龄" Width="Auto" DisplayMemberBinding="{Binding Age}"></GridViewColumn>
+                    <GridViewColumn x:Name="xshown1" Header="名称" Width="Auto" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                    <GridViewColumn x:Name="xExchange1" Header="交易所" Width="Auto" DisplayMemberBinding="{Binding Exchange}"></GridViewColumn>
+                    <GridViewColumn x:Name="xremark1" Header="备注" Width="Auto" DisplayMemberBinding="{Binding Remark}"></GridViewColumn>
+                    <GridViewColumn x:Name="xage2" Header="年龄" Width="Auto" DisplayMemberBinding="{Binding Age}"></GridViewColumn>
+                    <GridViewColumn x:Name="xshown2" Header="名称" Width="Auto" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                    <GridViewColumn x:Name="xExchange2" Header="交易所" Width="Auto" DisplayMemberBinding="{Binding Exchange}"></GridViewColumn>
+                    <GridViewColumn x:Name="xremark2" Header="备注" Width="Auto" DisplayMemberBinding="{Binding Remark}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
